@@ -1,0 +1,10 @@
+comment_id,comment_name,forename,surname,email,valididated,style
+RO01,Assumptions have not been clearly stated.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO02,There should be some tabular presentation of results.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO03,Graphs or graphical presentation have/has not been used as expected.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO04,The analysis of the results is too trivial in nature and a more detailed analysis was necessary (e.g. no confidence limits have been indicated).,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO05,"Too much has been read into the results and sweeping conclusions have been made, which are not fully justified.",Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO06,"Statistical analysis aspects are flawed, e.g. they are incorrect, incomplete or inappropriately applied.",Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO07,There is insufficient discussion of results and it has been wrongly assumed that they speak for themselves.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO08,Anomalies are present in results which have not been properly discussed or commented upon.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+RO09,"Presentation of results involves excessive repetition and an appendix should have been used for the bulk of the material, once the first example(s) had been shown.",Alan,Webb,jac.webb@ulster.ac.uk,1,n

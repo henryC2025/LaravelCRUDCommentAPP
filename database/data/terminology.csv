@@ -1,0 +1,12 @@
+comment_id,comment_name,forename,surname,email,valididated,style
+TE01,The method/methodology has not been justified through presentation of potential alternatives and resulting justification of the selected method on a balanced and well reasoned basis.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE02,The method/methodology is not well reported and there is insufficient detail and description; the reader should be able to follow the reasoning and development and there should be adequate explanation and illustration in relation to the approach adopted.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE03,Important assumptions have not been addressed/stated.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE04,Fundamental flaws in methodology have been noted.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE05,"Standard and well accepted approaches have not been adopted, without clear justification for avoiding these.",Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE06,"The presentation of mathematics has clear deficiencies e.g. errors are present; wrong symbols have been used, Greek letters are absent or incorrect, subscripts and/or superscripts are missing; equation layout is flawed.",Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE07,Important equations/expressions have not been properly numbered in sequence.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE08,Key steps are missing in the development of equations/expressions.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE09,Excessive detail has been included in the development of equations/expressions.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE10,Units or symbols are not consistent with appropriate conventions e.g. such as the SI system of units.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
+TE11,Abbreviations and/or acronyms do not follow normal conventions or have not been explicitly defined at the first mention.,Alan,Webb,jac.webb@ulster.ac.uk,1,n
