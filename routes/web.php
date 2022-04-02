@@ -40,8 +40,8 @@ require __DIR__.'/auth.php';
 */
 
 Route::get('ajax-all-comments-crud', [AjaxCOMMENTCRUDController::class, 'index']);
-Route::get('ajax-validate-crud', [AjaxVALIDATECRUDController::class, 'index']);
-Route::get('ajax-edit-crud', [AjaxVALIDATECRUDController::class, 'indexEdit']);
+Route::get('ajax-validate-crud', [AjaxVALIDATECRUDController::class, 'index'])->middleware(['auth', 'verified']);
+Route::get('ajax-edit-crud', [AjaxVALIDATECRUDController::class, 'indexEdit'])->middleware(['auth', 'verified']);
 Route::get('ajax-results-crud', [AjaxRESULTSCRUDController::class, 'index']);
 Route::get('ajax-terminology-crud', [AjaxTERMINOLOGYCRUDController::class, 'index']);
 

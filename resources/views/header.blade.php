@@ -10,7 +10,16 @@
 
 <div class="col-md-12 card-header text-center items-center	" style=display:inline-block>
 
-    <h1 class="header-title">Comment<img class=inline src=" {{URL::asset("/images/icon.png")}}">Application</h1>
+    <a href="/">
 
+        <h1 class="header-title">Comment<img class=inline src=" {{URL::asset("/images/icon.png")}}">Application</h1>
 
+    </a>
+
+</div>
+
+<div class="col-md-12 card-header text-center items-center	">
+    @auth
+    <h1 CLASS="name-title">LOGGED IN AS {{ strtoupper(auth()->user()->name) }}</h1>
+    @endauth
 </div>

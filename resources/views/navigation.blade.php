@@ -16,7 +16,19 @@
             <a class="nav-link nav-link-ltr" href="/ajax-terminology-crud">Add Terminology</a>
             <a class="nav-link nav-link-ltr" href="/ajax-validate-crud">Validate Comments</a>
             <a class="nav-link nav-link-ltr" href="/ajax-edit-crud">Edit Comments</a>
+            @guest
+            <a class="nav-link nav-link-ltr" href="/login">Log-in</a>
+            <a class="nav-link nav-link-ltr" href="/register">Register</a>
 
+            @endguest
+
+            @if(auth()->check())
+            <a class="nav-link nav-link-ltr" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+            @endif
         </nav>
 
     </div>

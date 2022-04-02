@@ -1,9 +1,12 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            <a href="ajax-all-comments-crud">
+                <img class=inline src=" {{URL::asset("/images/icon.png")}}">
             </a>
+
+
+
         </x-slot>
 
         <!-- Session Status -->
@@ -26,10 +29,7 @@
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -42,14 +42,19 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+                <a class="underline text-sm text-gray-600 hover:text-gray-900 ml-6" href="/register">Register</a>
                 @endif
 
-                <x-button class="ml-3">
+                <x-button class="btn ml-6">
                     {{ __('Log in') }}
                 </x-button>
+
+
+
+
             </div>
         </form>
     </x-auth-card>
