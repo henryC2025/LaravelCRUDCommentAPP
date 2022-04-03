@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="ajax-all-comments-crud">
+            <a href="/">
                 <img class=inline src=" {{URL::asset("/images/icon.png")}}">
             </a>
         </x-slot>

@@ -19,6 +19,13 @@ function getTableName(tableID) {
     }
 }
 
+function isValidEmailAddress(emailAddress) {
+    var validation = new RegExp(
+        /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+    );
+    return validation.test(emailAddress);
+}
+
 $(document).ready(function ($) {
     $.ajaxSetup({
         headers: {
@@ -125,30 +132,32 @@ $(document).ready(function ($) {
             console.log("empty");
         }
 
-        // $("#btn-save").html("Please Wait...");
-        // $("#btn-save").attr("disabled", true);
-
-        // ajax
-        $.ajax({
-            type: "POST",
-            url: `add-update-${commentCategory}-comment`,
-            data: {
-                id: id,
-                comment_id: comment_id,
-                comment_name: comment_name,
-                forename: forename,
-                surname: surname,
-                email: email,
-                validated: validated,
-                style: style,
-            },
-            dataType: "json",
-            success: function (res) {
-                window.location.reload();
-                $("#btn-save").html("Submit");
-                $("#btn-save").attr("disabled", false);
-            },
-        });
+        if (isValidEmailAddress(email)) {
+            //Do stuff
+            // ajax
+            $.ajax({
+                type: "POST",
+                url: `add-update-${commentCategory}-comment`,
+                data: {
+                    id: id,
+                    comment_id: comment_id,
+                    comment_name: comment_name,
+                    forename: forename,
+                    surname: surname,
+                    email: email,
+                    validated: validated,
+                    style: style,
+                },
+                dataType: "json",
+                success: function (res) {
+                    window.location.reload();
+                    $("#btn-save").html("Submit");
+                    $("#btn-save").attr("disabled", false);
+                },
+            });
+        } else {
+            alert("Invalid email");
+        }
     });
 });
 
@@ -158,29 +167,22 @@ $("#btnGet").click(function () {
     //Loop through all checked CheckBoxes in GridView.
     $("#Table1 input[type=checkbox]:checked").each(function () {
         var row = $(this).closest("tr")[0];
-        // message += row.cells[2].innerHTML;
         message += "⚫" + row.cells[2].innerHTML;
-        // message += " " + row.cells[4].innerHTML;
         message += "\n";
     });
 
     $("#TableTerminology input[type=checkbox]:checked").each(function () {
         var row = $(this).closest("tr")[0];
-        // message += row.cells[2].innerHTML;
         message += "⚫" + row.cells[2].innerHTML;
-        // message += " " + row.cells[4].innerHTML;
         message += "\n";
     });
 
     $("#TableResults input[type=checkbox]:checked").each(function () {
         var row = $(this).closest("tr")[0];
-        // message += row.cells[2].innerHTML;
         message += "⚫" + row.cells[2].innerHTML;
-        // message += " " + row.cells[4].innerHTML;
         message += "\n";
     });
 
-    //Display selected Row data in Alert Box.
     $("#message").html(message);
 
     return false;
@@ -190,6 +192,10 @@ $("#copy").click(function () {
     $("#message").select();
     document.execCommand("copy");
     alert("Copied On clipboard");
+});
+
+$("#clear").click(function () {
+    $("#message").html("");
 });
 
 $(".selectall-button").click(function () {

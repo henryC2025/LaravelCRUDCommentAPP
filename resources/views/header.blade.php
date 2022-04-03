@@ -22,4 +22,7 @@
     @auth
     <h1 CLASS="name-title">LOGGED IN AS {{ strtoupper(auth()->user()->name) }}</h1>
     @endauth
+    @guest
+    <h1 CLASS="name-title">{{ strtoupper("Guest") }}</h1>
+    @endguest
 </div>
